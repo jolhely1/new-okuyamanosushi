@@ -1,0 +1,238 @@
+html{
+    font-family: 'Noto Serif JP', serif;
+    font-weight: bold;
+    /* 文字サイズはスマホ表示基準です */
+    font-size: 15px;
+}
+:root{
+    --main-color:#CF3147;
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+/* ログオン画面 */
+.log-on{
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    position:fixed;
+    top: 0;
+    z-index: 10;
+}
+.logonimage{
+    width: 200px;
+    display: block;
+    position: absolute;
+    transform: translate(-50%, 50%);
+}
+.swipe-arrow{
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, 50%);
+    animation: flash 3s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column ;
+}
+/* 点滅させてます */
+@keyframes flash {
+    25%,75% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+.arrow-icon{
+    color: var(--main-color);
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+.swipe-text{
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+}
+/* ナブボタンパーツ */
+.nav-btn{
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    background-color: var(--main-color);
+    box-shadow: 2px 2px 9px -1px,
+    3px 3px 7px -3px rgba(255,255,255,0.8) inset;
+    position: fixed;
+    bottom: 1rem;
+    right:1rem;
+    z-index: 5;
+}
+.bars{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.bar{
+    background-color:white;
+    box-shadow:3px 4px 3px -3px rgba(0, 0, 0, 0.8) inset;
+    height: 8px;
+    width:55%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top:45px;
+    left:45px;
+}
+.bar::before{
+    content: "";
+    background-color:white;
+    box-shadow:3px 4px 3px -3px rgba(0, 0, 0, 0.8) inset;
+    height: 8px;
+    width:100%;
+    border-radius: 10px;
+    transform: translate(0%, -50%);
+    position: absolute;
+    top:-12px;
+}
+.bar::after{
+    content: "";
+    background-color:white;
+    box-shadow:3px 4px 3px -3px rgba(0, 0, 0, 0.8) inset;
+
+    height: 8px;
+    width:100%;
+    border-radius: 10px;
+    transform: translate(0%, 50%);
+    position: absolute;
+    top:12px;
+}
+/* ナビゲーションセクション */
+.nav-back{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.479);
+    position: fixed;
+    z-index: 4;
+    opacity: 1;
+}
+.base{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: var(--main-color); */
+    position: fixed;
+    top:0;
+    right:0;
+    /* ナブボタン押下で左右にスライドします */
+    transform: translateX(100%);
+    transition:  transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.active{
+    transform: translateX(0);
+}
+.sec-base{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.nav-title{
+    font-size: 2rem;
+    line-height: 2rem;
+    text-shadow:rgb(199, 199, 199) 1px 1px 5px;
+    transform: translate(-50%, 0%);
+    position: absolute;
+    top:10%;
+}
+.nav-title p::before
+{
+    display: block;
+    content:"";
+    box-shadow:rgb(199, 199, 199) 1px 1px 5px;
+
+    background-color: black;
+    width: 1.5rem;
+    height: 2px;
+    line-height: 1rem;
+    position: absolute;
+    top:1rem;
+    left:-2rem;
+}
+.nav-title p::after
+{
+    display: block;
+    content:"";
+    box-shadow:rgb(199, 199, 199) 1px 1px 5px;
+    background-color: black;
+    width: 1.5rem;
+    height: 2px;
+    line-height: 1rem;
+    position: absolute;
+    top:1rem;
+    right:-2rem;
+}
+.nav-items{
+    margin-top: 2rem;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    position: absolute;
+    top:15%;
+    text-align: center;
+}
+.nav-items li{
+    margin: 3rem 0;
+    font-size: 1.8rem;
+    text-shadow:rgb(199, 199, 199) 1px 1px 5px;
+
+}
+/* .menu li{
+    font-size: 1.2rem;
+    margin-left: 2rem;
+} */
+
+/* メインセクション */
+/* ヘッダーセクション */
+.header{
+    background-color:gray;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column ;
+    position: relative;
+    z-index: 0;
+}
+.header-text{
+    color: white;
+    text-shadow:black 3px 1px 8px;
+    font-size: 1.8rem;
+    letter-spacing: 0.3rem;
+    /* background-color: rgba(0, 0, 0, 0.24); */
+    /* border-radius: 30%; */
+    text-align: center;
+
+}
+.header-text::after{
+    font-size: 1rem;
+    line-height: 0.1em;
+    content: '\A Welcome \A to \A OKUYAMA NO SUSHI';
+    white-space: pre;
+    /* border: black 1px solid; */
+    border-bottom: black;
+}
+
+/* アバウトセクション */
+#about{
+    background-color:gray;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column ;
+    position: relative;
+    z-index: 0;
+}

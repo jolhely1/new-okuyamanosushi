@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="destyle.css">
+    <link rel="stylesheet" href="style.css">
+<!-- グーグルフォントのCDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+
+<!--SLICKのCDN-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" type="text/css">
+<!-- FONTOAWESOMEのCDN -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- ログオン画面 -->
+    <div id="logon" class="log-on">
+        <div>
+            <img class="logonimage" src="images\logo.png" alt="">
+        </div>
+        <div class="swipe-arrow">
+            <div class="arrow-icon"><i class="fas fa-angle-up"></i></div>
+            <div class="swipe-text">画面をタッチして下さい</div>
+        </div>
+    </div>
+<!-- ログオン画面END -->
+
+<!-- ナブボタンパーツ -->
+    <div id="nav-btn" class="nav-btn">
+        <div class="bars">
+        <div class="bar"></div>
+        </div>
+    </div>
+<!-- ナブボタンパーツEND-->
+
+<!-- ナビゲーションセクション -->
+    <div class="nav-back">
+        <div class="base">
+            <div class="sec-base">
+                <div class="nav-title">
+                    <p>お品書き</p>
+                </div>
+                <div class="nav-items">
+                    <ul>
+                        <li class="about"><a href="#about">お店について</a></li>
+                        <li class="menu"><a href="#menu">メニュー</a>
+                            <ul>
+                                <li class="food"><a href="#food">お食事</a></li>
+                                <li class="drink"><a href="#drink">お飲み物</a></li>
+                            </ul>
+                        </li>
+                        <li class="accesse"><a href="#accesse">アクセス</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ナビゲーションセクションEND -->
+
+<!-- メインセクション -->
+    <div class="main">
+        <div class="header">
+            <div class="header-text">ようこそ奥山の寿司へ</div>
+        </div>
+<!-- ヘッダーセクションEND -->
+        <div id="about">
+            <div class="header-text">ようこそ奥山の寿司へ</div>
+        </div>
+<!-- アバウトセクションEND -->
+        <div class="about">
+            <div class="header-text">ようこそ奥山の寿司へ</div>
+        </div>
+<!-- ヘッダーセクションEND -->
+        <div class="about">
+            <div class="header-text">ようこそ奥山の寿司へ</div>
+        </div>
+<!-- ヘッダーセクションEND -->
+        <div class="about">
+            <div class="header-text">ようこそ奥山の寿司へ</div>
+        </div>
+    </div>
+<!-- メインセクションEND -->
+
+
+
+
+
+
+<!--カルーセルスライダーパート -->
+    <!-- <div class="container">
+        <div  class="box"></div>
+        <div  class="box2"></div>
+        <div  class="box3"></div>
+        <div  class="box4"></div>
+      </div> -->
+
+
+<!-- js記述の際は以下のCDNを読みこむこと -->
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<!-- ログイン画面のスワイプアップ挙動に関して -->
+    <script>
+        $(function() {
+        $("#logon").on('click', function() {
+            $(this).animate({ height: 0,}, 1000);
+            // $(this).slideUp(600);
+            // $(this).css('height','0px');
+        });
+        });
+// 要素を中央に配置してます
+        $(document).ready(function () {
+        h = $(window).height();
+        w = $(window).width();
+        $(".logonimage").css("bottom", h/2 + "px");
+        $(".logonimage").css("left", w/2 + "px");
+        $(".swipe-arrow").css("left", w/2 + "px");
+        $(".swipe-arrow").css("bottom", h/6 + "px");
+        $(".nav-title").css("left", w/2 + "px");
+        $(".nav-items").css("left", w/2 + "px");
+
+
+        });
+// ナブボタンの挙動toggle()でクラスを追加削除しています
+
+        $(document).ready(function() {
+            $(".nav-btn").click(function () {
+                $(".base").toggleClass("active");
+            });
+        });
+
+    </script>
+<!--カルーセルスライダーSSCRIPT-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        $('.container').slick({
+          autoplay: true,
+          dots: true,
+          infinite: true,
+          slidesToShow: 2,
+          // slidesToScroll: 2,
+          // speed: 500,
+          // fade: true,
+          // cssEase: 'linear'
+        });
+      </script> 
+</body>
+</html>
