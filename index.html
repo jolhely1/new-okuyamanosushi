@@ -19,13 +19,14 @@
 </head>
 <body>
 <!-- ログオン画面 -->
-    <div id="logon" class="log-on">
+    <div id="logon" class="log-on first-view">
         <div>
             <img class="logonimage" src="images\logo.png" alt="">
         </div>
         <div class="swipe-arrow">
             <div class="arrow-icon"><i class="fas fa-angle-up"></i></div>
             <div class="swipe-text">画面をタッチして下さい</div>
+            <div class="en">Touch here</div>
         </div>
     </div>
 <!-- ログオン画面END -->
@@ -40,21 +41,22 @@
 
 <!-- ナビゲーションセクション -->
     <div class="nav-back">
-        <div class="base">
-            <div class="sec-base">
+        <div class="base first-view"> 
+            <div class="sec-base first-view">
                 <div class="nav-title">
                     <p>お品書き</p>
+                    <p class="en">content</p>
                 </div>
                 <div class="nav-items">
                     <ul>
-                        <li class="about"><a href="#about">お店について</a></li>
-                        <li class="menu"><a href="#menu">メニュー</a>
+                        <li><a href="#about">お店について</a><p class="en">About</p></li>
+                        <li><a href="#menu">メニュー</a><p class="en">menu</p>
                             <ul>
-                                <li class="food"><a href="#food">お食事</a></li>
-                                <li class="drink"><a href="#drink">お飲み物</a></li>
+                                <li><a href="#food">お食事</a><p class="en">food</p></li>
+                                <li><a href="#drink">お飲み物</a><p class="en">drink</p></li>
                             </ul>
                         </li>
-                        <li class="accesse"><a href="#accesse">アクセス</a></li>
+                        <li><a href="#accesse">アクセス</a><p class="en">Accesse</p></li>
                     </ul>
                 </div>
             </div>
@@ -64,24 +66,22 @@
 
 <!-- メインセクション -->
     <div class="main">
-        <div class="header">
-            <div class="header-text">ようこそ奥山の寿司へ</div>
+        <div class="header first-view">
+            <div class="header-text ja">ようこそ奥山の寿司へ</div>
+            <div class="en">Welcome <br>to <br>OKUTAMA NO SUSHI</div>
+
         </div>
 <!-- ヘッダーセクションEND -->
-        <div id="about">
-            <div class="header-text">ようこそ奥山の寿司へ</div>
+        <div id="about" class="about">
         </div>
 <!-- アバウトセクションEND -->
         <div class="about">
-            <div class="header-text">ようこそ奥山の寿司へ</div>
         </div>
 <!-- ヘッダーセクションEND -->
         <div class="about">
-            <div class="header-text">ようこそ奥山の寿司へ</div>
         </div>
 <!-- ヘッダーセクションEND -->
         <div class="about">
-            <div class="header-text">ようこそ奥山の寿司へ</div>
         </div>
     </div>
 <!-- メインセクションEND -->
@@ -129,9 +129,15 @@
         $(document).ready(function() {
             $(".nav-btn").click(function () {
                 $(".base").toggleClass("active");
+                $(".nav-back").toggleClass("sec-active");
+
             });
         });
-
+// スマホの画面調整のため
+        document.addEventListener('DOMContentLoaded', () =>{
+        document.querySelectorAll('first-view')
+        .style.height = `${window.outerHeight}px`
+})
     </script>
 <!--カルーセルスライダーSSCRIPT-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
