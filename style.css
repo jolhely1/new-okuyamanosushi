@@ -29,12 +29,12 @@ body{
     width:150px;
     display: block;
     position: absolute;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, -20%);
 }
 .swipe-arrow{
     width: 100%;
     position: absolute;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, -160%);
     animation: flash 3s linear infinite;
     display: flex;
     align-items: center;
@@ -61,55 +61,187 @@ body{
 }
 /* ナブボタンパーツ */
 .nav-btn{
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    background-color: var(--main-color);
-    box-shadow: 2px 2px 9px -1px,
-    3px 3px 7px -3px rgba(255,255,255,0.8) inset;
     position: fixed;
     bottom: 2rem;
-    right:2rem;
+    right: 2rem;
     z-index: 5;
 }
-.bars{
-    display: flex;
-    flex-direction: column;
+.nav-name{
+    position: fixed;
+    bottom: -.5rem;
+    right: 0rem;
+    animation: flash 3s linear infinite;
+}
+.nav-container{
     position: relative;
 }
-.bar{
-    background-color:white;
-    box-shadow:3px 4px 3px -3px rgba(0, 0, 0, 0.8) inset;
-    height: 5px;
-    width:70%;
-    border-radius: 10px;
-    transform: translate(-50%, -50%);
+.nav-container img:nth-of-type(1){
+    width: 80px;
     position: absolute;
-    top:25px;
-    left:25px;
+    bottom: 1.6rem;
+    right:9.6rem;
 }
-.bar::before{
-    content: "";
-    background-color:white;
-    box-shadow:3px 4px 3px -3px rgba(0, 0, 0, 0.8) inset;
-    height: 5px;
-    width:100%;
-    border-radius: 10px;
-    transform: translate(0%, -50%);
+.nav-container img:nth-of-type(2){
+    width: 30px;
     position: absolute;
-    top:-5px;
+    bottom: 2.4rem;
+    right:7rem;
 }
-.bar::after{
-    content: "";
-    background-color:white;
-    box-shadow:3px 4px 3px -3px rgba(0, 0, 0, 0.8) inset;
-    height: 5px;
-    width:100%;
-    border-radius: 10px;
-    transform: translate(0%, 50%);
-    position: absolute;
-    top:5px;
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
 }
+.menu-trigger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  /* background-color: gray; */
+}
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height:2px;
+  background-color:white;
+  color:black;
+  border-radius: 4px;
+  box-shadow: 1px 1px 20px 1px black;
+}
+.back span{
+  background-color:black;
+}
+/* 棒線のスタイル指定 */
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+.menu-trigger span:nth-of-type(2) {
+  top: 14px;
+}
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0px;
+}
+/* バツから横棒に戻るときの挙動 */
+.menu-trigger span:nth-of-type(1) {
+    -webkit-animation: menu-bar01 .75s forwards;
+    animation: menu-bar01 .75s forwards;
+  }
+  @-webkit-keyframes menu-bar01 {
+    0% {
+      -webkit-transform: translateY(20px) rotate(45deg);
+    }
+    50% {
+      -webkit-transform: translateY(20px) rotate(0);
+    }
+    100% {
+      -webkit-transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes menu-bar01 {
+    0% {
+      transform: translateY(20px) rotate(45deg);
+    }
+    50% {
+      transform: translateY(20px) rotate(0);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+  .menu-trigger span:nth-of-type(2) {
+    transition: all .25s .25s;
+    opacity: 1;
+  }
+  .menu-trigger span:nth-of-type(3) {
+    -webkit-animation: menu-bar02 .75s forwards;
+    animation: menu-bar02 .75s forwards;
+  }
+  @-webkit-keyframes menu-bar02 {
+    0% {
+      -webkit-transform: translateY(-20px) rotate(-45deg);
+    }
+    50% {
+      -webkit-transform: translateY(-20px) rotate(0);
+    }
+    100% {
+      -webkit-transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes menu-bar02 {
+    0% {
+      transform: translateY(-20px) rotate(-45deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(0);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+
+  /* 横棒からバツになるときの挙動 */
+  /* 一番上の棒の挙動 */
+  .menu-trigger.active span:nth-of-type(1) {
+    -webkit-animation: active-menu-bar01 .75s forwards;
+    animation: active-menu-bar01 .75s forwards;
+  }
+  @-webkit-keyframes active-menu-bar01 {
+    0% {
+      -webkit-transform: translateY(0) rotate(0);
+    }
+    50% {
+      -webkit-transform: translateY(20px) rotate(0);
+    }
+    100% {
+      -webkit-transform: translateY(20px) rotate(45deg);
+    }
+  }
+/* 95度時計回り　translateYで高さ軸を調整 */
+
+  @keyframes active-menu-bar01 {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    50% {
+      transform: translateY(14px) rotate(0);
+    }
+    100% {
+      transform: translateY(14px) rotate(45deg);
+    }
+  }
+  .menu-trigger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  /* 三番目一番下の棒の挙動 */
+  .menu-trigger.active span:nth-of-type(3) {
+    -webkit-animation: active-menu-bar03 .75s forwards;
+    animation: active-menu-bar03 .75s forwards;
+  }
+  @-webkit-keyframes active-menu-bar03 {
+    0% {
+      -webkit-transform: translateY(0) rotate(0);
+    }
+    50% {
+      -webkit-transform: translateY(-20px) rotate(0);
+    }
+    100% {
+      -webkit-transform: translateY(-20px) rotate(-45deg);
+    }
+  }
+/* －95度反時計回り　translateYで高さ軸を調整 */
+  @keyframes active-menu-bar03 {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    50% {
+      transform: translateY(-14px) rotate(0);
+    }
+    100% {
+      transform: translateY(-14px) rotate(-45deg);
+    }
+  }
+
 /* ナビゲーションセクション */
 .nav-back{
     width: 100vw;
@@ -120,7 +252,7 @@ body{
 }
 .sec-active{
     background-color: rgba(0, 0, 0, 0.74);
-    transition: 0.8s;
+    transition: 0.3s;
 }
 .base{
     width: 100vw;
@@ -133,13 +265,15 @@ body{
     transform: translateX(100%);
     transition:  transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-.active{
+.open-close{
     transform: translateX(0);
 }
 .sec-base{
-    width: 100vw;
+    max-width: 100vw;
     height: 100vh;
-    background-color: white;
+    /* background-color: white; */
+    background: url("images/00nav/nav-back-washi.jpg");
+    background-size: cover;
     border-radius: 10px;
     position: relative;
 
@@ -151,7 +285,7 @@ body{
     text-shadow:rgb(199, 199, 199) 1px 1px 5px;
     transform: translate(-50%, 0%);
     position: absolute;
-    top:10%;
+    top:5%;
 }
 
 .nav-title p::before
@@ -159,7 +293,6 @@ body{
     display: block;
     content:"";
     box-shadow:rgb(199, 199, 199) 1px 1px 5px;
-
     background-color: black;
     width: 1rem;
     height: 2px;
@@ -181,12 +314,12 @@ body{
     top:1rem;
     right:-2rem;
 }
+
 .nav-items{
-    margin-top: 2rem;
     position: absolute;
     transform: translate(-50%, 0%);
     position: absolute;
-    top:15%;
+    top:13%;
     text-align: center;
 }
 .nav-items li{
@@ -207,7 +340,7 @@ body{
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction:column ;
     position: relative;
@@ -218,21 +351,16 @@ body{
     text-shadow:black 3px 1px 8px;
     font-size: 1.8rem;
     letter-spacing: 0.3rem;
-    /* background-color: rgba(0, 0, 0, 0.24); */
-    /* border-radius: 30%; */
-    text-align: center;
-
+    padding-top: 15rem;
 }
 .header .en{
     color: white;
     text-shadow:black 3px 1px 8px;
-    text-align: center;
     line-height: 1.5rem;
     letter-spacing: 0.2rem;
-
 }
 /* アバウトセクション */
-.about{
+/* .about{
     background-color:gray;
     width: 100vw;
     height: 100vh;
@@ -242,4 +370,4 @@ body{
     flex-direction:column ;
     position: relative;
     z-index: 0;
-}
+} */

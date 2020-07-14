@@ -32,16 +32,26 @@
 <!-- ログオン画面END -->
 
 <!-- ナブボタンパーツ -->
-    <div id="nav-btn" class="nav-btn">
-        <div class="bars">
-        <div class="bar"></div>
+<div class="nav-btn">
+    <a class="menu-trigger" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <div class="nav-name">
+        <div class="nav-container">
+            <img src="images/00nav/nav-menu-menuhakotira.png" alt="">
+            <!-- <i class="fas fa-long-arrow-alt-right"></i> -->
+            <img src="images/00nav/nav-menu-arrow.png" alt="">
         </div>
     </div>
+</div>
+
 <!-- ナブボタンパーツEND-->
 
 <!-- ナビゲーションセクション -->
     <div class="nav-back">
-        <div class="base first-view"> 
+        <div class="base first-view">
             <div class="sec-base first-view">
                 <div class="nav-title">
                     <p>お品書き</p>
@@ -68,21 +78,25 @@
     <div class="main">
         <div class="header first-view">
             <div class="header-text ja">ようこそ奥山の寿司へ</div>
-            <div class="en">Welcome <br>to <br>OKUTAMA NO SUSHI</div>
-
+            <div class="en">Welcome <br>to <br>OKUYAMA NO SUSHI</div>
         </div>
 <!-- ヘッダーセクションEND -->
-        <div id="about" class="about">
+        <div id="about　first-view" class="about">
         </div>
 <!-- アバウトセクションEND -->
-        <div class="about">
+        <div id="menu　first-view" class="menu">
         </div>
-<!-- ヘッダーセクションEND -->
-        <div class="about">
+<!-- メニューセクションEND -->
+        <div id="food　first-view" class="food">
         </div>
-<!-- ヘッダーセクションEND -->
-        <div class="about">
+<!-- フードセクションEND -->
+        <div id="drink　first-view" class="drink">
         </div>
+<!-- ドリンクセクションEND -->
+        <div id="accesse　first-view" class="accesse">
+        </div>
+<!-- セクションEND -->
+
     </div>
 <!-- メインセクションEND -->
 
@@ -128,8 +142,11 @@
 
         $(document).ready(function() {
             $(".nav-btn").click(function () {
-                $(".base").toggleClass("active");
+                $(".base").toggleClass("open-close");
                 $(".nav-back").toggleClass("sec-active");
+                $(".menu-trigger").toggleClass("active");
+                $("body").toggleClass("back");
+
 
             });
         });
@@ -139,7 +156,7 @@
         .style.height = `${window.outerHeight}px`
 })
     </script>
-<!--カルーセルスライダーSSCRIPT-->
+<!--カルーセルスライダーSCRIPT-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" type="text/javascript"></script>
