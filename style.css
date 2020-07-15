@@ -27,14 +27,15 @@ body{
 }
 .logonimage{
     width:150px;
+    /* height: 150px; */
     display: block;
     position: absolute;
-    transform: translate(-50%, -20%);
+    transform: translate(-50%, -50%);
 }
 .swipe-arrow{
     width: 100%;
     position: absolute;
-    transform: translate(-50%, -160%);
+    transform: translate(-50%, -50%);
     animation: flash 3s linear infinite;
     display: flex;
     align-items: center;
