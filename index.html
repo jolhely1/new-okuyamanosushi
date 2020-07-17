@@ -19,7 +19,7 @@
 </head>
 <body>
 <!-- ログオン画面 -->
-    <div id="logon" class="log-on first-view">
+    <!-- <div id="logon" class="log-on first-view">
         <div>
             <img class="logonimage" src="images\logo.png" alt="">
         </div>
@@ -28,7 +28,7 @@
             <div class="swipe-text">画面をタッチして下さい</div>
             <div class="en">Touch here</div>
         </div>
-    </div>
+    </div> -->
 <!-- ログオン画面END -->
 
 <!-- ナブボタンパーツ -->
@@ -51,6 +51,7 @@
 
 <!-- ナビゲーションセクション -->
     <div class="nav-back">
+    </div>
         <div class="base first-view">
             <div class="sec-base first-view">
                 <div class="nav-title">
@@ -59,47 +60,209 @@
                 </div>
                 <div class="nav-items">
                     <ul>
-                        <li><a href="#about">お店について</a><p class="en">About</p></li>
-                        <li><a href="#menu">メニュー</a><p class="en">menu</p>
+                        <li><a href="#about"><p>お店について</p><p class="en">About</p></a></li>
+                        <li><p>メニュー</p><p class="en">menu</p>
                             <ul>
-                                <li><a href="#food">お食事</a><p class="en">food</p></li>
-                                <li><a href="#drink">お飲み物</a><p class="en">drink</p></li>
+                                <li><a href="#food"><p>お食事</p><p class="en">food</p></a></li>
+                                <li><a href="#drink"><p>お飲み物</p><p class="en">drink</p></a></li>
                             </ul>
                         </li>
-                        <li><a href="#accesse">アクセス</a><p class="en">Accesse</p></li>
+                        <li><a href="#accesse"><p>アクセス</p><p class="en">Accesse</p></a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
 <!-- ナビゲーションセクションEND -->
 
 <!-- メインセクション -->
     <div class="main">
-        <div class="header first-view">
-            <div class="header-text ja">ようこそ奥山の寿司へ</div>
-            <div class="en">Welcome <br>to <br>OKUYAMA NO SUSHI</div>
+        <div class="top first-view">
+            <div class="top-text ja"><h1>ようこそ奥山の寿司へ</h1></div>
+            <div class="en"><h1>Welcome <br>to <br>OKUYAMA NO SUSHI</h1></div>
         </div>
-<!-- ヘッダーセクションEND -->
-        <div id="about　first-view" class="about">
+<!-- アバウトセクション -->
+        <div class="about wrapper">
+            <div class=" head">
+                <h2 class="ja">お店について</h2>
+                <h2 class="en">about</h2>
+            </div>
+            <div class="about-image">
+                <img src="images\02about\01about.jpg" alt="">
+            </div>
+            <div class="about-discription">
+                <h3 class="ja">奥山 幸</h3>
+                <h3 class="en">Sachi OKUYAMA</h3>
+                <p>東京、ウィーンにて寿司を握り、ヒルトンホテルにて腕を振るう。2001年の春、自らのレストランをオープン。2004年にはブダペストの50のベストレストランの1つに選出。小さな島で生まれ、子供の頃から魚介になれ親しむ。当店の魚は日本から選んできたものを自らの手で捌いてる。</p>
+                <p>The master chef OKUYAMA　began his career in Tokyo. Later, he was invited to Vienna, where he spent 5 years practicing the art of making sushi.
+                    In recognition of his expertise and competence, he was invited to the Hilton Hotel. In the spring of 2001, He opened his own restaurant in 2004. The restaurant was rightly chosen as one of the 50 best restaurants in Budapest.
+                    He was born in a small island, so he has known fish well since he was a child, he had the opportunity to study different fish species up close.
+                    He brings the fish by plane from abroad, and he processes them himself.</p>
+            </div>
         </div>
 <!-- アバウトセクションEND -->
-        <div id="menu　first-view" class="menu">
-        </div>
-<!-- メニューセクションEND -->
-        <div id="food　first-view" class="food">
+        <div id="food" class="food">
+            <div class="head">
+                <h2 class="ja">お食事</h2>
+                <h2 class="en">food</h2>
+            </div>
+            <div class="container">
+                <div  class="box">
+                    <div class="menu-title">
+                        <h3 class="sushi ja">寿司</h3>
+                        <h3 class="sushi en">sushi</h3>
+                    </div>
+                    <div class="menu-list">
+                        <dl>
+                            <dt>あけぼの<br>（寿司セット大）</dt>
+                            <dd>Akebono Large Sushi Set<br>(7+1 sushis)</dd>
+                            <dt>ゆりかご<br>（寿司セット小）</dt>
+                            <dd>Yurikago Small Sushi Set<br>(4+1 sushis)</dd>
+                            <dt>クレオパトラ<br>（ちらし寿司）</dt>
+                            <dd>Cleopatra(Chrasi sushi)</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div  class="box">
+                    <div class="menu-title">
+                        <h3 class="sushi ja">刺身</h3>
+                        <h3 class="sushi en">Sasimi</h3>
+                    </div>
+                    <div class="menu-list">
+                        <dl>
+                            <dt>刺身盛合せ</dt>
+                            <dd>Sashimi Moriawase<br>(Mixed Dish with<br>Raw seafood and Shellfish)</dd>
+                            <dt>鮪の刺身</dt>
+                            <dd>Maguro no Sashimi<br>(Raw Tunafish)</dd>
+                            <dt>鮭の刺身</dt>
+                            <dd>Sake no Sashimi<br>(Raw Salmon)</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div  class="box">
+                    <div class="menu-title">
+                        <h3 class="sushi ja">うどん</h3>
+                        <h3 class="sushi en">Udon noodle</h3>
+                    </div>
+                    <div class="menu-list">
+                        <dl>
+                            <dt>月見うどん</dt>
+                            <dd>Udon with raw egg</dd>
+                            <dt>天ぷらうどん</dt>
+                            <dd>Udon with deep fried<br> vegitable</dd>
+                           
+                        </dl>
+                    </div>
+                </div>
+                <div  class="box">
+                    <div class="menu-title">
+                        <h3 class="sushi ja">焼き魚</h3>
+                        <h3 class="sushi en">grilled fish</h3>
+                    </div>
+                    <div class="menu-list">
+                        <dl>
+                            <dt>焼き鮭</dt>
+                            <dd>Grilled Salmon</dd>
+                            <dt>焼きさんま</dt>
+                            <dd>Grilled Saury Fish</dd>
+                            
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="indicater">
+                <div class="indi-box" >←</div>
+                <div class="indi-box" >→</div>
+            </div>
         </div>
 <!-- フードセクションEND -->
-        <div id="drink　first-view" class="drink">
+<div id="drink" class="food">
+    <div class="head">
+        <h2 class="ja">お飲み物</h2>
+        <h2 class="en">drink</h2>
+    </div>
+    <div class="container">
+        <div  class="box">
+            <div class="menu-title">
+                <h3 class="sushi ja">日本酒</h3>
+                <h3 class="sushi en">sake</h3>
+            </div>
+            <div class="menu-list">
+                <!-- <dl>
+                    <dt>あけぼの<br>（寿司セット大）</dt>
+                    <dd>Akebono Large Sushi Set<br>(7+1 sushis)</dd>
+                    <dt>ゆりかご<br>（寿司セット小）</dt>
+                    <dd>Yurikago Small Sushi Set<br>(4+1 sushis)</dd>
+                    <dt>クレオパトラ<br>（ちらし寿司）</dt>
+                    <dd>Cleopatra(Chrasi sushi)</dd>
+                </dl> -->
+            </div>
         </div>
+        <div  class="box">
+            <div class="menu-title">
+                <h3 class="sushi ja">梅酒</h3>
+                <h3 class="sushi en">Umeshu</h3>
+            </div>
+            <div class="menu-list">
+                <!-- <dl>
+                    <dt>刺身盛合せ</dt>
+                    <dd>Sashimi Moriawase<br>(Mixed Dish with<br>Raw seafood and Shellfish)</dd>
+                    <dt>鮪の刺身</dt>
+                    <dd>Maguro no Sashimi<br>(Raw Tunafish)</dd>
+                    <dt>鮭の刺身</dt>
+                    <dd>Sake no Sashimi<br>(Raw Salmon)</dd>
+                </dl> -->
+            </div>
+        </div>
+        <div  class="box">
+            <div class="menu-title">
+                <h3 class="sushi ja">ビール</h3>
+                <h3 class="sushi en">beer</h3>
+            </div>
+            <div class="menu-list">
+                <!-- <dl>
+                    <dt>月見うどん</dt>
+                    <dd>Udon with raw egg</dd>
+                    <dt>天ぷらうどん</dt>
+                    <dd>Udon with deep fried<br> vegitable</dd>
+                   
+                </dl> -->
+            </div>
+        </div>
+        
+    </div>
+    <div class="indicater">
+        <div class="indi-box" >←</div>
+        <div class="indi-box" >→</div>
+    </div>
+</div>
 <!-- ドリンクセクションEND -->
-        <div id="accesse　first-view" class="accesse">
-        </div>
-<!-- セクションEND -->
-
+<div id="access" class="access">
+    <div class="head">
+        <h2 class="ja">アクセス</h2>
+        <h2 class="en">ACCESS</h2>
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2694.055524601208!2d19.038023000000006!3d47.527782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d95661b02d5b%3A0xc8f0ca2a281ed72a!2z5aWl5bGx44Gu5a-_5Y-4!5e0!3m2!1sja!2shu!4v1594971428347!5m2!1sja!2shu" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <div class="access-discription">
+        <dl>
+            <dt>Address</dt>
+            <dd>1036 Budapest, Kolosy tér 5-6. <br>Kolosy üzletház</dd>
+            <dt>Phone</dt>
+            <dd>06 1 250-8256</dd>
+            <dt>Open</dt>
+            <dd>13.00-22.00 kivéve Hétfő</dd>
+            <dt>E-mail</dt>
+            <dd>okuyamanosushi@altavizsla.hu</dd>
+        </dl>
+    </div>
+</div>
+<!-- アクセスセクションEND -->
     </div>
 <!-- メインセクションEND -->
+<dl>
 
+</dl>
 
 
 
@@ -164,10 +327,11 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" type="text/javascript"></script>
       <script type="text/javascript">
         $('.container').slick({
-          autoplay: true,
+          autoplay: false,
           dots: true,
+          arrows:false,
           infinite: true,
-          slidesToShow: 2,
+          slidesToShow: 1,
           // slidesToScroll: 2,
           // speed: 500,
           // fade: true,
